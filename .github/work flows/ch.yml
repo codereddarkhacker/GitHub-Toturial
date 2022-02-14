@@ -24,7 +24,7 @@
 #    See the documentation for each action used below for the recommended IAM policies for this IAM user,
 #    and best practices on handling the access key credentials.
 
-name: Deploy to Cyberhack ECS
+name: Cyberhack ECS
 
 on:
   push:
@@ -59,7 +59,7 @@ jobs:
         cyb-region: ${{ env.CYB_REGION }}
 
     - name: Login to Cyberhack ECR
-      id: login cyberhack-ecr
+      id: login -ecr
       uses: cyb-actions/cyberhack-ecr-login@v1
 
     - name: Build, tag, and push image to Cyberhack ECR
